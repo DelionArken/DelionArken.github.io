@@ -70,12 +70,12 @@
 
 					<div style="width: 506px; margin-left: 17%; padding-top: 5%; position: relative">
 						<h1 class="nomargin">Project 1</h1>
-						<hr class="delimeter"/>
+						<hr class="delimeter" />
 						<div id="cont1_tags" style="min-height: 3px; padding-left: .5rem;">
 							<div style="background-image: url(https://www.w3.org/html/logo/badge/html5-badge-h-solo.png)" class="tag-image"></div>
 							<div style="background-image: url(cpp_logo.svg)" class="tag-image"></div>
 						</div>
-						<hr class="delimeter"/>
+						<hr class="delimeter" />
 						<div id="cont1_content" class="project-text">
 							This is the project's short description.
 						</div>
@@ -84,6 +84,19 @@
 					<!--<span class="horizontal-line"></span>-->
 				</div>
 			</div>
+			<script>
+				//Get the button:
+				mybutton = document.getElementById("ScrollBtn");
+				sidepanel = document.getElementById("sidepanel");
+
+				var CurrentContainer = 0;
+				document.getElementById("start").addEventListener("click", startFunction.bind(null));
+				document.getElementById("ScrollBtn").addEventListener("click", doScrolling.bind(null, "#cont0", 600));
+				document.getElementById("side-toggle").addEventListener("click", sidepanel_toggle.bind(null));
+				document.getElementById("sidepanel-container").addEventListener("mouseleave", sidepanel_toggle.bind(null));
+				// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function () { scrollFunction() };
+			</script>
 		</section>
 		<div class="footer">
 			<div style="text-align:right; margin-right: 5rem; margin-top: 1rem;">
@@ -93,18 +106,5 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		//Get the button:
-		mybutton = document.getElementById("ScrollBtn");
-		sidepanel = document.getElementById("sidepanel");
-
-		var CurrentContainer = 0;
-		document.getElementById("start").addEventListener("click", startFunction.bind(null));
-		document.getElementById("ScrollBtn").addEventListener("click", doScrolling.bind(null, "#cont0", 600));
-		document.getElementById("side-toggle").addEventListener("click", sidepanel_toggle.bind(null));
-		document.getElementById("sidepanel-container").addEventListener("mouseleave", sidepanel_toggle.bind(null));
-		// When the user scrolls down 20px from the top of the document, show the button
-		window.onscroll = function () { scrollFunction() };
-	</script>
 </body>
 </html>
