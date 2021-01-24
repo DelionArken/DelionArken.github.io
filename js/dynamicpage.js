@@ -10,7 +10,7 @@ $(function () {
     baseHeight = $pageWrap.height() - $mainContent.height();
 
     $("nav").delegate("a", "click", function () {
-        window.location.hash = $(this).attr("href");
+        window.location.hash = $(this).attr("href").replace(".html", "");
         return false;
     });
 
@@ -24,9 +24,9 @@ $(function () {
                 .fadeOut(200, function () {
                     $mainContent.hide().load(newHash + " #content", function () {
                         $mainContent.fadeIn(200, function () {
-                            $pageWrap.animate({
-                                height: baseHeight + $mainContent.height() + "px"
-                            });
+                            //$pageWrap.animate({
+                            //    height: baseHeight + $mainContent.height() + "px"
+                            //});
                         });
                         $("nav a").removeClass("current");
                         $("nav a[href='" + newHash + "']").addClass("current");
