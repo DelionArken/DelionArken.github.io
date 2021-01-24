@@ -24,7 +24,7 @@ $(function () {
                 .fadeOut(200, function () {
                     $mainContent.hide().load(newHash + " #content", function () {
                         $mainContent.fadeIn(200, function () {
-                            $pageWra.height(
+                            $pageWrap.height(
                                 baseHeight + $mainContent.height() + "px"
                             );
                         });
