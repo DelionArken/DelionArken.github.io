@@ -6,8 +6,15 @@ function scrollFunction() {
 	} else {
 		mybutton.style.display = "none";
 	}
-	//document.body.scrollTop = document.body.scrollTop + window.innerHeight;
-	//document.documentElement.scrollTop = document.documentElement.scrollTop + window.innerHeight;
+	if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
+		sidepanel.style.display = "block";
+	} else {
+		sidepanel.style.display = "none";
+	}
+}
+
+function sidepanel_toggle() {
+	sidepanel.classList.toggle("extended");
 }
 
 // When the user clicks on the button, scroll to the top of the document
