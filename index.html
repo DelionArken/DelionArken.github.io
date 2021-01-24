@@ -81,10 +81,8 @@
 						</div>
 					</div>
 
-					<!--<span class="horizontal-line"></span>-->
 				</div>
 				<script>
-					//Get the button:
 					mybutton = document.getElementById("ScrollBtn");
 					sidepanel = document.getElementById("sidepanel");
 
@@ -93,7 +91,6 @@
 					document.getElementById("ScrollBtn").addEventListener("click", doScrolling.bind(null, "#cont0", 600));
 					document.getElementById("side-toggle").addEventListener("click", sidepanel_toggle.bind(null));
 					document.getElementById("sidepanel-container").addEventListener("mouseleave", sidepanel_toggle.bind(null));
-					// When the user scrolls down 20px from the top of the document, show the button
 					window.onscroll = function () { scrollFunction() };
 				</script>
 			</div>
