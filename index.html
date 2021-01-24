@@ -83,20 +83,20 @@
 
 					<!--<span class="horizontal-line"></span>-->
 				</div>
-			</div>
-			<script>
-				//Get the button:
-				mybutton = document.getElementById("ScrollBtn");
-				sidepanel = document.getElementById("sidepanel");
+				<script>
+					//Get the button:
+					mybutton = document.getElementById("ScrollBtn");
+					sidepanel = document.getElementById("sidepanel");
 
-				var CurrentContainer = 0;
-				document.getElementById("start").addEventListener("click", startFunction.bind(null));
-				document.getElementById("ScrollBtn").addEventListener("click", doScrolling.bind(null, "#cont0", 600));
-				document.getElementById("side-toggle").addEventListener("click", sidepanel_toggle.bind(null));
-				document.getElementById("sidepanel-container").addEventListener("mouseleave", sidepanel_toggle.bind(null));
-				// When the user scrolls down 20px from the top of the document, show the button
-				window.onscroll = function () { scrollFunction() };
-			</script>
+					var CurrentContainer = 0;
+					document.getElementById("start").addEventListener("click", startFunction.bind(null));
+					document.getElementById("ScrollBtn").addEventListener("click", doScrolling.bind(null, "#cont0", 600));
+					document.getElementById("side-toggle").addEventListener("click", sidepanel_toggle.bind(null));
+					document.getElementById("sidepanel-container").addEventListener("mouseleave", sidepanel_toggle.bind(null));
+					// When the user scrolls down 20px from the top of the document, show the button
+					window.onscroll = function () { scrollFunction() };
+				</script>
+			</div>
 		</section>
 		<div class="footer">
 			<div style="text-align:right; margin-right: 5rem; margin-top: 1rem;">
